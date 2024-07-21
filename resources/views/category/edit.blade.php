@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="">Edit Category</h5>
-            <a href="" class="btn btn-dark">back</a>
+            <a href="{{route('category')}}" class="btn btn-dark">back</a>
         </div>
         <div class="card-body">
             <form action="{{url('/category/update/'.$category->id)}}" method="post">

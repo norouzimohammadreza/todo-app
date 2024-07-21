@@ -21,7 +21,7 @@
                     <td>
                         @method('put')
                         <a href="{{url('category/edit'.'/'.$category->id)}}" class="btn btn-sm btn-secondary">Edit</a>
-                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                        <a href="{{route('category.destroy',['id'=>$category->id])}}" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>
                 @endforeach
