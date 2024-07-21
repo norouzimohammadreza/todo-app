@@ -7,11 +7,12 @@
             <a href="" class="btn btn-dark">back</a>
         </div>
         <div class="card-body">
-            <form action="" method="POST">
-
+            <form action="{{url('/category/update/'.$category->id)}}" method="post">
+                @csrf
+                @method('put')
                 <div class="mb-3">
                     <label class="form-label">Title</label>
-                    <input type="text" name="title" value="sfsafas" class="form-control">
+                    <input type="text" name="title" value="{{$category->title}}" class="form-control">
                     <div class="form-text text-danger">safafasfas</div>
                 </div>
                 <button type="submit" class="btn btn-secondary">Submit</button>

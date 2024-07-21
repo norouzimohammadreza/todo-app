@@ -30,6 +30,16 @@ class CategoryController extends Controller
     }
     public function edit($id)
     {
-        dd($id);
+        $category = Category::where('id',$id)->first();
+        return view('category.edit',[
+            'category' => $category
+        ]);
+    }
+    public function update(Request $request, $id)
+    {
+       Category::where('id',$id)->update([
+           'title' => $request->title
+       ]);
+       return redirect('/category');
     }
 }
