@@ -13,7 +13,7 @@
                 <div class="mb-3">
                     <label class="form-label">Title</label>
                     <input type="text" name="title" value="{{$category->title}}" class="form-control">
-                    <div class="form-text text-danger">safafasfas</div>
+                    <div class="form-text text-danger">@error('title') {{$message}}@enderror</div>
                 </div>
                 <button type="submit" class="btn btn-secondary">Submit</button>
             </form>

@@ -37,9 +37,16 @@ class CategoryController extends Controller
     }
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'title' => 'required|min:5'
+        ]);
        Category::where('id',$id)->update([
            'title' => $request->title
        ]);
        return redirect('/category');
+    }
+    public function delete($id)
+    {
+
     }
 }
