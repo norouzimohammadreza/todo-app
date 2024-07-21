@@ -25,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Todo</a>
+                        <a class="nav-link active" aria-current="page" href="{{url('/')}}">Todo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link" href="{{url('category')}}">Category</a>
                     </li>
                 </ul>
             </div>
