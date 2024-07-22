@@ -23,7 +23,7 @@
                     <td>{{$todo->title}}</td>
                     <td>{{$todo->category->title}}</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-secondary">Show</a>
+                        <a href="{{route('show',['id'=>$todo->id])}}" class="btn btn-sm btn-secondary">Show</a>
                         <button disabled class="btn btn-sm btn-outline-danger">Completed</button>
                     </td>
                 </tr>

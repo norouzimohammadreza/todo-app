@@ -15,6 +15,13 @@ class HomeController extends Controller
             'todos'=> $todos
         ]);
     }
+    public function show($id)
+    {
+        $todo = Todo::find($id);
+        return view('show',[
+            'todo' => $todo
+        ]);
+    }
     public function create()
     {
         $categories = Category::all();

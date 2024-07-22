@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class,'index']);
+Route::get('/show/{id}', [HomeController::class,'show'])->name('show');
 Route::get('/create', [HomeController::class,'create'])->name('create');
 Route::post('/', [HomeController::class,'store'])->name('store');
 
