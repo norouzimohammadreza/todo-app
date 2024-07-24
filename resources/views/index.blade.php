@@ -24,7 +24,7 @@
                     <td>{{$todo->category->title}}</td>
                     <td>
                         <a href="{{route('show',['id'=>$todo->id])}}" class="btn btn-sm btn-secondary">Show</a>
-                        <button disabled class="btn btn-sm btn-outline-danger">Completed</button>
+                        <button disabled class="btn btn-sm {{$todo->status? 'btn-outline-success ' : 'btn-outline-danger '}}">{{$todo->status? 'Completed' : 'doing'}}</button>
                     </td>
                 </tr>
                 @endforeach

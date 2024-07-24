@@ -6,7 +6,10 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class,'index']);
 Route::get('/show/{id}', [HomeController::class,'show'])->name('show');
 Route::get('/create', [HomeController::class,'create'])->name('create');
+Route::get('/edit/{id}', [HomeController::class,'edit'])->name('edit');
+Route::get('/delete/{id}', [HomeController::class,'destroy'])->name('delete');
 Route::post('/', [HomeController::class,'store'])->name('store');
+Route::put('/update/{todo}', [HomeController::class,'update'])->name('update');
 
 Route::get('/category', [CategoryController::class,'index'])->name('category');
 Route::get('/category/create', [CategoryController::class,'create'])->name('category.create');

@@ -19,7 +19,7 @@ class CategoryController extends Controller
      Category::create([
          'title' => $request->title
      ]);
-     return redirect('/');
+     return redirect('/category');
     }
     public function index()
     {

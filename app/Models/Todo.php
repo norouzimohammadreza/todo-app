@@ -15,6 +15,7 @@ class Todo extends Model
         'category_id',
         'image'
     ];
+
     public function category()
     {
        return $this->belongsTo(Category::class,);

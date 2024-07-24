@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5>Todo</h5>
-            <a href="" class="btn btn-dark">back</a>
+            <a href="{{url('/')}}" class="btn btn-dark">back</a>
         </div>
         <div class="card-body">
             <div class="mb-3">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-12 col-md-4 mb-3">
                     <label class="form-label">Status</label>
-                    <input disabled type="text" value="{{$todo->status ? 'true': 'false'}}" class="form-control">
+                    <input disabled type="text" value="{{$todo->status ? 'completed': 'doing'}}" class="form-control">
                 </div>
             </div>
             <div class="mb-3">
@@ -29,8 +29,8 @@
                 <textarea disabled class="form-control" rows="3">{{$todo->body}}</textarea>
             </div>
             <div>
-                <a href="#" class="btn btn-secondary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="{{url('edit/'.$todo->id)}}" class="btn btn-secondary">Edit</a>
+                <a href="{{route('delete',[$todo->id])}}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
