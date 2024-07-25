@@ -74,8 +74,7 @@ class HomeController extends Controller
             'category_id.required'=>'the field category is required'
         ]);
         if($request->hasFile('image')){
-          $spath = Storage::delete('public/images/'.$todo->category->title.'/'.$todo->image);
-            dd($spath);
+            Storage::delete('images/'.$todo->category->title.'/'.$todo->image);
             $imageName = $request->title.'.'.$request->file('image')->extension();
             $request->file('image')->move(public_path('images'.'/'.$todo->category->title),$imageName);
         }
@@ -83,7 +82,7 @@ class HomeController extends Controller
             'title'=>$request->title,
             'body'=> $request->body,
             'category_id'=>$request->category_id,
-            'image' => $request->hasFile('image') ? $imageName :$todo->image
+            'image' => $request->hasFile('image')? $imageName :$todo->image
         ]);
         return redirect('/');
 
